@@ -1,4 +1,4 @@
-import { ICalcularImposto } from "../interfaces/ICalcularImposto";
+import { ICalcularImposto } from "./ICalcularImposto";
 
 export class ImpostoEletronico implements ICalcularImposto{
     calcular(valor: number): number {

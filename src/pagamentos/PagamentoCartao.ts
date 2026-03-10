@@ -1,4 +1,4 @@
-import { IProcessadorPagamentos } from "../interfaces/IProcessadorPagamento";
+import { IProcessadorPagamentos } from "./IProcessadorPagamento";
 
 
 export class PagamentoCartao implements IProcessadorPagamentos{

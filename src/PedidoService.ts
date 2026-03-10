@@ -1,6 +1,6 @@
-import { ICalcularImposto } from "./interfaces/ICalcularImposto";
-import { INotificador } from "./interfaces/INotificador";
-import { IProcessadorPagamentos } from "./interfaces/IProcessadorPagamento";
+import { ICalcularImposto } from "./impostos/ICalcularImposto";
+import { INotificador } from "./notificacoes/INotificador";
+import { IProcessadorPagamentos } from "./pagamentos/IProcessadorPagamento";
 
 export class PedidoService{
     private imposto: ICalcularImposto;

@@ -1,4 +1,4 @@
-import { INotificador } from "../interfaces/INotificador";
+import { INotificador } from "./INotificador";
 
 export class NotificacaoEmail implements INotificador{
     enviar(mensagem:string) {

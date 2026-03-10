@@ -1,5 +1,5 @@
 import { ImpostoAlimento } from "./impostos/ImpostoAlimento";
-import { NotificacaoEmail } from "./notificoes/NotificacaoEmail";
+import { NotificacaoEmail } from "./notificacoes/NotificacaoEmail";
 import { PagamentoCartao } from "./pagamentos/PagamentoCartao";
 import { PedidoService } from "./PedidoService";
 
