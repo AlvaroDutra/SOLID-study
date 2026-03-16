@@ -66,3 +66,37 @@ class Estagiario implements Funcionario {
     }
 }
 ~~~
+
+## Identificação
+
+Violações identificadas:
+
+- **ISP** - A interface *Funcionario* possui métodos que não se aplicam a todos os tipos de funcionarios, forçando a implementação de métodos desnecessários nas classes concretas.  
+
+>~~~typescript
+>interface Funcionario {
+>    trabalhar(): void;
+>    registrarPonto(): void;
+>    receberSalario(): void;
+>    gerenciarEquipe(): void;
+>    escreverCodigi(): void;
+>}
+>~~~
+
+- **LSP** - As classes retornam erros em métodos herdados. Se uma classe chamar um dos subtipos e tentar usar o método *receberSalario()*, por exemplo, vai funcionar para *Gerente* mas não para *Estagiario*.
+
+>~~~typescript
+> class Gerente implements Funcionario {
+>   receberSalario(): void{
+>       console.log("Salário recebido!");
+>   }
+>}
+>
+> class Estagiario implements Funiconario {
+>   receberSalario(): void {
+>       throw new Error("Estagiário recebe bolsa, não salário."); 
+>   }    
+>}
+>~~~
+
+## Refatoração
