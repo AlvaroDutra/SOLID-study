@@ -99,4 +99,14 @@ Violações identificadas:
 >}
 >~~~
 
-## Refatoração
+- **DIP** - A interface *Funcionario* foi implementada de maneira que acomode detalhes das classes concretas, invertendo a direção correta de dependência. Se tentarmos adicionar um novo tipo de funcionário com outro comportamento, força a interface a crescer mais afetando as outras clases por consequência.
+
+>~~~typescript
+>interface Funcionario {
+>    trabalhar(): void;
+>    registrarPonto(): void;
+>    receberSalario(): void;
+>    gerenciarEquipe(): void;
+>    escreverCodigi(): void;
+>}
+>~~~
