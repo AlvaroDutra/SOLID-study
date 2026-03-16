@@ -20,56 +20,50 @@ interface IBolsista{
 }
 
 
-class Gerente implements IFuncionario {
+class Gerente implements IFuncionario, IRemunerado, ILider {
     trabalhar(): void {
-        console.log("Gerente trabalhando!");
+        console.log("Gerente trabalhando.");
     }
     registrarPonto(): void {
-        console.log("Ponto registrado!");
+        console.log("Ponto registrado.");
     }
     receberSalario(): void {
         console.log("Salário recebido!");
     }
     gerenciarEquipe(): void {
-        console.log("Gerenciando equipe");
+        console.log("Gerenciando equipe.");
     }
-    escreverCodigo(): void {
-        throw new Error("Gerente não escreve código!");
-    }
+    
 }
 
-class Desenvolvedor implements IFuncionario {
+class Desenvolvedor implements IFuncionario, IRemunerado, IDesenvolvedor{
     trabalhar(): void {
-        console.log("Desenvolvedor trabalhando!");
+        console.log("Desenvolvedor trabalhando.");
     }
     registrarPonto(): void {
-        console.log("Ponto registrado!");
+        console.log("Ponto registrado");
     }
     receberSalario(): void {
-        console.log("Salário recebido!");
-    }
-    gerenciarEquipe(): void {
-        throw new Error("Desenvolvedor não gerencia equipe.");
+        console.log("Salário recebido.");
     }
     escreverCodigo(): void {
         console.log("Escrevendo código.");
     }
+
 }
 
-class Estagiario implements IFuncionario {
+class Estagiario implements IFuncionario, IBolsista, IDesenvolvedor {
     trabalhar(): void {
-        console.log("Estagiário trabalhando!");
+        console.log("Estagiário trabalhando.")
     }
     registrarPonto(): void {
-        console.log("Ponto registrado!");
+        console.log("Ponto registrado.")
     }
-    receberSalario(): void {
-        throw new Error("Estagiário recebe bolsa, não salário!");
-    }
-    gerenciarEquipe(): void {
-        throw new Error("Estagiario não gerencia equipe.");
+    receberBolsa(): void {
+        console.log("Bolsa recebida.");
     }
     escreverCodigo(): void {
-        console.log("Estagiário escrevendo código!");
+        console.log("Escrevendo código");
     }
+    
 }
